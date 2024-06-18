@@ -1,11 +1,16 @@
-export class Station {
+import {AddPassengerEvent} from "./Events/AddPassengerEvent.js";
+import {RemovePassengerEvent} from "./Events/RemovePassengerEvent.js";
+
+export class Station extends EventTarget {
   passengers = [];
 
   constructor() {
+    super();
   }
 
   addPassenger(passenger) {
     this.passengers.push(passenger);
+    this.dispatchEvent(new AddPassengerEvent(passenger));
   }
 
   removePassenger(passenger) {
@@ -21,6 +26,7 @@ export class Station {
 
     if(theIndex !== -1) {
       this.passengers.splice(theIndex, 1);
+      this.dispatchEvent(new RemovePassengerEvent(passenger));
     }
   }
 }
