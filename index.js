@@ -88,7 +88,7 @@ window.addEventListener("load", () => {
     }
   }
 
-  const hasTicketChance = 0.8;
+  const hasTicketChance = 0.5;
   const timeToBusMs = 3000;
 
   //init station
@@ -99,7 +99,7 @@ window.addEventListener("load", () => {
 
   //init bus line
   const busLineDiv = document.querySelector('#bus-line');
-  const busLine = new BusLine(2);
+  const busLine = new BusLine(5);
   busLine.addEventListener('add_passenger', onBusLineAddPassenger);
   busLine.addEventListener('remove_passenger', onBusLineRemovePassenger);
   busLine.addEventListener('bus_arrive', onBusArrive);
