@@ -1,0 +1,14 @@
+#station {
+  border:1px solid black;
+}
+
+.passenger {
+  border-radius:100%;
+  width:10px;
+  height:10px;
+  background:red;
+}
+
+.passenger.has-ticket {
+  background:blue;
+}
