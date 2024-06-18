@@ -1,4 +1,4 @@
-import {PurchaseTicketEvent} from "./PurchaseTicketEvent.js";
+import {PurchaseTicketEvent} from "./Events/PurchaseTicketEvent.js";
 
 export class Passenger extends EventTarget {
   hasTicket = false;
