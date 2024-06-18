@@ -4,11 +4,25 @@
 
 .passenger {
   border-radius:100%;
-  width:10px;
-  height:10px;
+  color:white;
+  display:inline-block;
+  width:20px;
+  height:20px;
+  line-height:20px;
+  text-align:center;
   background:red;
 }
 
 .passenger.has-ticket {
   background:blue;
+}
+
+#bus-line {
+  border:1px solid green;
+}
+
+.bus {
+  width:100px;
+  height:30px;
+  background:orange;
 }
